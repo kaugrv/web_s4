@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Prog Web S4"/>
+  <img src="./assets/soleil.jpg">
+  <HeuresSoleil location="Champs-Sur-Marne" sunrise="7:32:07 AM" sunset="6:32:09 PM"/>
+  <br>
+  <HeuresSoleil location="Assérac" sunrise="7:50:27 AM" sunset="6:53:46 PM "/>
+  <img src="./assets/2soleils.jpg">
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeuresSoleil from './components/HeuresSoleil.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeuresSoleil
   }
 }
 </script>
