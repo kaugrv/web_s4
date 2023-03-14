@@ -1,30 +1,45 @@
+<script>
+
+  import SignPreview from './components/SignPreview.vue';
+
+  export default {
+    name: 'App',
+    components: {
+      SignPreview
+    }
+  }
+
+</script>
+
+
+<title>Astroview</title>
+
+
 <template>
-  <img src="./assets/soleil.jpg">
-  <HeuresSoleil location="Champs-Sur-Marne" sunrise="7:32:07 AM" sunset="6:32:09 PM"/>
-  <br>
-  <HeuresSoleil location="Assérac" sunrise="7:50:27 AM" sunset="6:53:46 PM "/>
-  <img src="./assets/2soleils.jpg">
+
+  <SignPreview sign_name = "Sagittarius" sign_logo ="♐" date_range = "Nov 23 - Dec 21"/>
+  <SignPreview sign_name = "Gemini" sign_logo ="♊" date_range = "May 21 - Jun 21"/>
 
 </template>
 
-<script>
-import HeuresSoleil from './components/HeuresSoleil.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HeuresSoleil
-  }
-}
-</script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+
+    border-width:2px;
+    border-style:solid;
+    border-color:black;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  
 </style>

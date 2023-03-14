@@ -1,6 +1,6 @@
-# project
+# Astroview
 
-## Project setup
+## Astroview setup
 ```
 npm install
 ```
