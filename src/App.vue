@@ -1,24 +1,26 @@
 <script>
 
-  import SignPreview from './components/SignPreview.vue';
+import SiteHeader from './components/SiteHeader.vue';
+import TodayDate from './components/TodayDate.vue';
+import SignGallery from './components/SignGallery.vue';
 
   export default {
     name: 'App',
     components: {
-      SignPreview
+      SiteHeader,
+      TodayDate,
+      SignGallery
     }
   }
 
 </script>
 
-
 <title>Astroview</title>
 
-
 <template>
-
-  <SignPreview sign_name = "Sagittarius" sign_logo ="♐" date_range = "Nov 23 - Dec 21"/>
-  <SignPreview sign_name = "Gemini" sign_logo ="♊" date_range = "May 21 - Jun 21"/>
+  <SiteHeader site_title="Astroview"/>
+  <TodayDate/>
+  <SignGallery/>
 
 </template>
 
@@ -31,15 +33,13 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
 
-    border-width:2px;
-    border-style:solid;
-    border-color:black;
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    flex-direction: row;
+  }
+
+  body {
+    background-image: url("./assets/background.jpg") ;
+    background-size: cover;
+    
   }
   
 </style>
