@@ -26,9 +26,9 @@
     <h3>{{ mood }}</h3>
     <div>{{ description }}</div>
     <br>
-    <div>🎨 Color : {{ color }}</div>
-    <div>🔢 Lucky number : {{ lucky_number }}</div>
-    <div>🕒 Lucky time : {{ lucky_time }}</div>
+    <div>🎨 <b>Color :</b> {{ color }}</div>
+    <div>🔢 <b>Lucky number :</b> {{ lucky_number }}</div>
+    <div>🕒 <b>Lucky time :</b> {{ lucky_time }}</div>
 
   </div>
 
@@ -36,6 +36,8 @@
 
 <style scoped>
   .SignPreview {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
     color:aliceblue;
     width: 250px;
     height: 200px;
@@ -56,7 +58,6 @@
       backdrop-filter: blur(10px);
       width: 250px;
       height : 300px;
-
   }
 
   h1 {

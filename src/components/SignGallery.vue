@@ -11,7 +11,11 @@
 
         data() {
             return {
-                signData : []
+                signData : [],
+                search: "",
+                signsSortType: "AZName"
+
+
             }
         },
 
@@ -30,6 +34,16 @@
     </script>
 
 <template>
+    <br>
+    <div class="gallery-options">
+        <input type="text" v-model="search" placeholder="What is your sign?">
+        <label for="sign-sort">Sort by : </label>
+        <select v-model="signsSortType" id="sign-sort">
+            <option value="AZName">Signs A-Z</option>
+            <option value="ZAName">Signs Z-A</option>
+        </select>
+    </div>
+
     <div class="sign-gallery">
     <div v-for="i in 12" :key="i">
       <SignPreview v-if="$data.signData.hasOwnProperty(i-1)" 

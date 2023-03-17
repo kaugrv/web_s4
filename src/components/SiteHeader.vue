@@ -15,6 +15,6 @@ export default {
 h1 {
     color: aliceblue;
     font-size: 5vw;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 </style>
