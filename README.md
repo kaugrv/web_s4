@@ -1,6 +1,6 @@
-# Astroview
+# Astrovue
 
-## Astroview setup
+## Astrovue setup
 ```
 npm install
 ```

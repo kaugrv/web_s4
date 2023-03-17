@@ -25,6 +25,10 @@
     <h3>{{ date_range }}</h3>
     <h3>{{ mood }}</h3>
     <div>{{ description }}</div>
+    <br>
+    <div>🎨 Color : {{ color }}</div>
+    <div>🔢 Lucky number : {{ lucky_number }}</div>
+    <div>🕒 Lucky time : {{ lucky_time }}</div>
 
   </div>
 
@@ -37,18 +41,21 @@
     height: 200px;
     margin: 10px;
     padding: 10px;
-    background-color: rgba(238, 130, 238, 0.705);
+    background-color: rgba(238, 130, 238, 0.241);
     border-radius: 1%;
-    box-shadow: 2px 2px 2px 2px  rgba(165, 11, 144, 0.621);
+    box-shadow: 2px 2px 2px 2px  rgba(0, 0, 0, 0.208);
     overflow: auto;
     transition: 0.3s;
-
+    
+    backdrop-filter: blur(5px);
   }
 
   .SignPreview:hover {
-      background-color: rgba(107, 15, 107, 0.985);
-      box-shadow: 2px 2px 2px 5px  rgba(165, 11, 144, 0.621);
-
+      background-color: rgba(186, 14, 186, 0.436);
+      box-shadow: 2px 2px 2px 5px  rgba(0, 0, 0, 0.279);
+      backdrop-filter: blur(10px);
+      width: 250px;
+      height : 300px;
 
   }
 

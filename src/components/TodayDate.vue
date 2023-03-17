@@ -27,7 +27,7 @@
 
 <template>
     <div class="today-date" v-if="$data.dateData.hasOwnProperty(0)" >
-        {{dateData[0].current_date}}
+        Today is {{dateData[0].current_date}}
     </div>
 </template>
 
@@ -36,7 +36,7 @@
     .today-date {
         color: aliceblue;
         font-size: 1.5vw;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
 </style>

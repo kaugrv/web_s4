@@ -15,10 +15,10 @@ import SignGallery from './components/SignGallery.vue';
 
 </script>
 
-<title>Astroview</title>
+<title>Astrovue</title>
 
 <template>
-  <SiteHeader site_title="Astroview"/>
+  <SiteHeader site_title="Astrovue"/>
   <TodayDate/>
   <SignGallery/>
 
@@ -39,7 +39,6 @@ import SignGallery from './components/SignGallery.vue';
   body {
     background-image: url("./assets/background.jpg") ;
     background-size: cover;
-    
   }
   
 </style>

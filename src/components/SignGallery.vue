@@ -38,6 +38,10 @@
         :date_range="signData[i-1].date_range"
         :mood="signData[i-1].mood"
         :description="signData[i-1].description"
+        :color="signData[i-1].color"
+        :lucky_number="signData[i-1].lucky_number"
+        :lucky_time="signData[i-1].lucky_time"
+
       />
 
 
@@ -49,11 +53,13 @@
 
 <style scoped>
     .sign-gallery {
-        margin-top: 60px;
-        border-width:2px;
-        border-style:solid;
-  position: relative;
-        display: grid;
-        grid-template-columns: 300px 300px 300px 300px;
+    margin-top: 60px;
+    border-width:2px;
+    display: grid;
+
+    justify-content: center;
+    align-content: center;
+
+    grid-template-columns: 300px 300px 300px 300px;
     }
 </style>
