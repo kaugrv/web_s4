@@ -3,16 +3,16 @@
   export default {
     name: 'SignPreview',
     props: {
-    "sign_logo": String,
-    "sign_name": String,
-    "date_range": String,
-    "current_date": String,
-    "description": String,
-    "compatibility": String,
-    "mood": String,
-    "color": String,
-    "lucky_number": String,
-    "lucky_time": String,
+      "sign_logo": String,
+      "sign_name": String,
+      "date_range": String,
+      "current_date": String,
+      "description": String,
+      "compatibility": String,
+      "mood": String,
+      "color": String,
+      "lucky_number": String,
+      "lucky_time": String,
 	}
 }
 
@@ -35,12 +35,13 @@
 </template>
 
 <style scoped>
+
   .SignPreview {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
     color:aliceblue;
-    width: 250px;
-    height: 200px;
+    font-size: small;
+    width: 350px;
+    height: 350px;
     margin: 10px;
     padding: 10px;
     background-color: rgba(238, 130, 238, 0.241);
@@ -48,16 +49,14 @@
     box-shadow: 2px 2px 2px 2px  rgba(0, 0, 0, 0.208);
     overflow: auto;
     transition: 0.3s;
-    
     backdrop-filter: blur(5px);
   }
 
   .SignPreview:hover {
-      background-color: rgba(186, 14, 186, 0.436);
+      background-color: rgba(235, 149, 235, 0.573);
+      color:black;
       box-shadow: 2px 2px 2px 5px  rgba(0, 0, 0, 0.279);
-      backdrop-filter: blur(10px);
-      width: 250px;
-      height : 300px;
+      backdrop-filter: blur(12px);
   }
 
   h1 {

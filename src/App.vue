@@ -4,26 +4,24 @@ import SiteHeader from './components/SiteHeader.vue';
 import TodayDate from './components/TodayDate.vue';
 import SignGallery from './components/SignGallery.vue';
 
-  export default {
-    name: 'App',
-    components: {
-      SiteHeader,
-      TodayDate,
-      SignGallery
-    }
+export default {
+  name: 'App',
+  components: {
+    SiteHeader,
+    TodayDate,
+    SignGallery
   }
+}
 
 </script>
 
 <title>Astrovue</title>
 
 <template>
-  <SiteHeader site_title="Astrovue"/>
-  <TodayDate/>
+  <SiteHeader site_title="Astrovue"/><TodayDate/>
   <SignGallery/>
 
 </template>
-
 
 <style>
 
