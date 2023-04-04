@@ -1,6 +1,9 @@
 # Astrovue
 
-## Astrovue setup
+A simple Vue JS horoscope visualisation website!
+
+
+## Project setup
 ```
 npm install
 ```
