@@ -40,9 +40,9 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:aliceblue;
     font-size: small;
-    width: 350px;
-    height: 350px;
-    margin: 10px;
+    width: 70vw;
+    height: 40vh;
+    margin: 1vw;
     padding: 10px;
     background-color: rgba(238, 130, 238, 0.241);
     border-radius: 1%;

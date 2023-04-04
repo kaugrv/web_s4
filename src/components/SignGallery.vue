@@ -10,15 +10,20 @@
 		},
         computed: {
             signOrganizedData: function() {
-                let organizeddata = this.signData
+                const filterFunc = (a) => a.sign_name.toLowerCase().includes(this.search.toLowerCase());
+                //let organizeddata = this.signData.filter(filterFunc);
+                let organizeddata = this.signData.filter(filterFunc);
+
                 if(this.signSortType=="AZName") {
                     const comparator = (a, b) => (a.sign_name).localeCompare(b.sign_name) ;
                     return (organizeddata).sort(comparator);    
                 }
+                
                 if(this.signSortType=="ZAName") {
                     const comparator = (a, b) => (a.sign_name).localeCompare(b.sign_name) ;
                     return (organizeddata).sort(comparator).reverse();    
                 }
+                
                 return organizeddata
         }
         },
@@ -90,7 +95,6 @@
         border-radius: 5px;
         border: none;
         outline: none;
-
     }
 
     button {
@@ -100,11 +104,11 @@
     .sign-gallery {
         margin-top: 60px;
         border-width:2px;
-        display: grid;
+        /* display: grid; */
 
-        justify-content: center;
-        align-content: center;
+        /* justify-content: center;
+        align-content: center; */
 
-        grid-template-columns: 380px 380px 380px 380px;
+       /* grid-template-columns: 380px 380px 380px 380px; */
     }
 </style>
