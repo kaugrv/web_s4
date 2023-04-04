@@ -1,5 +1,5 @@
 <template>
-    <h1>{{ site_title }}</h1>
+  <h1><img src="../assets/logo.png" class="logo"/>  {{ site_title }}</h1>
 </template>
 
 <script>
@@ -13,10 +13,13 @@
 
 <style scoped>
   h1 {
-      text-align: center;
+      margin: auto;
       color: aliceblue;
-      text-shadow: 2px 2px 50px rgb(214, 0, 189);
-      font-size: 5vw;
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 7vw;
+      font-family:'Futura Round Cond Light';
+  }
+
+  .logo {
+    width: 4vw;
   }
 </style>

@@ -19,44 +19,73 @@
 </script>
 
 <template>
+  <div class="SignCard">
+    <img src="../assets/aries.png" class="sign-img" />
 
-  <div class="SignPreview">
-    <h2>{{ sign_logo }}{{ sign_name }}</h2>
-    <h3>{{ date_range }}</h3>
-    <h3>{{ mood }}</h3>
-    <div>{{ description }}</div>
-    <br>
-    <div>🎨 <b>Color :</b> {{ color }}</div>
-    <div>🔢 <b>Lucky number :</b> {{ lucky_number }}</div>
-    <div>🕒 <b>Lucky time :</b> {{ lucky_time }}</div>
-
+    <div class="SignPreview">
+        <h2>{{ sign_logo }}{{ sign_name }}</h2>
+        <h3>{{ date_range }}</h3>
+        <h3>{{ mood }}</h3>
+        <div>{{ description }}</div>
+        <br />
+        <div class="sign-numbers">
+             <b>🎨 Color :</b> {{ color }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <b>🔢 Lucky number :</b> {{ lucky_number }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <b>🕒 Lucky time :</b> {{ lucky_time }}   
+      </div>
+    </div>
   </div>
-
 </template>
+
 
 <style scoped>
 
+  h2 {
+    font-size: 1vw;
+  }
+
+  .SignCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
   .SignPreview {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:aliceblue;
-    font-size: small;
-    width: 70vw;
-    height: 40vh;
-    margin: 1vw;
-    padding: 10px;
-    background-color: rgba(238, 130, 238, 0.241);
-    border-radius: 1%;
-    box-shadow: 2px 2px 2px 2px  rgba(0, 0, 0, 0.208);
-    overflow: auto;
+    color:rgb(0, 0, 0);
+    font-size: 0.4vw;
+    width: 20vw;
+    height: 18vh;
+    margin:  1vh 1vw ;
+    margin-left: 0;
+    padding: 3vh 2vw;
+    background-color: rgba(229, 225, 194, 1);
+    
+    overflow: hidden;
     transition: 0.3s;
     backdrop-filter: blur(5px);
+    flex: 1;
   }
 
   .SignPreview:hover {
-      background-color: rgba(235, 149, 235, 0.573);
-      color:black;
-      box-shadow: 2px 2px 2px 5px  rgba(0, 0, 0, 0.279);
-      backdrop-filter: blur(12px);
+    background-color: rgb(173, 169, 142);
+    color:black;
+    box-shadow: 2px 2px 2px 5px  rgba(0, 0, 0, 0.137);
+    backdrop-filter: blur(12px);
+  }
+
+  .SignImage {
+  }
+  .sign-img {
+    
+    height: 24vh;
+    margin: 0;
+  }
+
+  .sign-numbers {
+    font-size:0.5vw;
+
   }
 
   h1 {

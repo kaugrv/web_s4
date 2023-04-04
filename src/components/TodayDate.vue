@@ -24,19 +24,15 @@
 </script>
 
 <template>
-    <div class="today-date" v-if="$data.dateData.hasOwnProperty(0)" >
-        Today date : {{dateData[0].current_date}}
-    </div>
+    <div class="today-date" v-if="$data.dateData.hasOwnProperty(0)" ><b>Today's date : </b>{{dateData[0].current_date}}</div>
 </template>
 
 
 <style scoped>
     .today-date {
-        
-            text-align: center;
         color: aliceblue;
         font-size: 1.5vw;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family:'Futura Round Cond Light'
     }
     
 </style>

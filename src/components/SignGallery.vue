@@ -6,12 +6,10 @@
         name: 'SignGallery',
         components: {
             SignPreview
-        
 		},
         computed: {
             signOrganizedData: function() {
                 const filterFunc = (a) => a.sign_name.toLowerCase().includes(this.search.toLowerCase());
-                //let organizeddata = this.signData.filter(filterFunc);
                 let organizeddata = this.signData.filter(filterFunc);
 
                 if(this.signSortType=="AZName") {
@@ -22,6 +20,10 @@
                 if(this.signSortType=="ZAName") {
                     const comparator = (a, b) => (a.sign_name).localeCompare(b.sign_name) ;
                     return (organizeddata).sort(comparator).reverse();    
+                }
+
+                if(this.signSortType=="Dates") {
+                    return organizeddata
                 }
                 
                 return organizeddata
@@ -60,8 +62,10 @@
         <br><br>
         <label for="sign-sort">Sort by : </label>
         <select v-model="signSortType" id="sign-sort">
+            <option value="Dates">By date</option>
             <option value="AZName">Signs A-Z</option>
             <option value="ZAName">Signs Z-A</option>
+
         </select>
     </div>
 
@@ -100,15 +104,12 @@
     button {
         border-radius: 5px;
         padding: 12px;    
-}
+    }
     .sign-gallery {
-        margin-top: 60px;
-        border-width:2px;
-        /* display: grid; */
-
-        /* justify-content: center;
-        align-content: center; */
-
-       /* grid-template-columns: 380px 380px 380px 380px; */
+        display: grid; 
+        position: relative;
+        grid-template-columns: 31vw 31vw 31vw;   
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
