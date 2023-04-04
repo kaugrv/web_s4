@@ -31,10 +31,15 @@
   }
 
   body {
-    /* background-image: url("./assets/background.jpg") ;
+    background-image: url("./assets/background.jpg") ;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; */
+    background-attachment: fixed;
     background-color: rgb(33, 23, 23);
   }
+
+  ::selection{
+    background-color : #f0a67896;
+    color : #fff
+}
 </style>

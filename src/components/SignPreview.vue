@@ -5,6 +5,7 @@
     props: {
       "sign_logo": String,
       "sign_name": String,
+      "sign_img":String,
       "date_range": String,
       "current_date": String,
       "description": String,
@@ -14,13 +15,13 @@
       "lucky_number": String,
       "lucky_time": String,
 	}
-}
+};
 
 </script>
 
 <template>
   <div class="SignCard">
-    <img src="../assets/aries.png" class="sign-img" />
+    <img v-if="sign_img" :src="sign_img" class="sign-img"/>
 
     <div class="SignPreview">
         <h2>{{ sign_logo }}{{ sign_name }}</h2>
@@ -60,25 +61,25 @@
     margin:  1vh 1vw ;
     margin-left: 0;
     padding: 3vh 2vw;
-    background-color: rgba(229, 225, 194, 1);
+    background-color: rgba(229, 225, 194, 0.69);
     
     overflow: hidden;
-    transition: 0.3s;
-    backdrop-filter: blur(5px);
+    transition: 1s;
+    backdrop-filter: blur(1px);
     flex: 1;
   }
 
   .SignPreview:hover {
-    background-color: rgb(173, 169, 142);
     color:black;
-    box-shadow: 2px 2px 2px 5px  rgba(0, 0, 0, 0.137);
-    backdrop-filter: blur(12px);
+    box-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.137);
+    backdrop-filter: blur(10px);
+    transition: 1s;
   }
+
 
   .SignImage {
   }
   .sign-img {
-    
     height: 24vh;
     margin: 0;
   }

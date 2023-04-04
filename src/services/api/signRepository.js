@@ -19,8 +19,12 @@ for (let i = 0; i < urls.length; i++) {
   
   if (response.status == 200) {
       const data = await response.json();
-      data.sign_name= signs[i];
+      data.sign_name = signs[i];
+
       data.sign_logo = logos[i];
+
+    data.sign_img = require("../../assets/"+signs[i]+".png");
+
       tab.push(data);
   } else {
     throw new Error(response.statusText);

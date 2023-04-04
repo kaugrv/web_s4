@@ -34,7 +34,7 @@
             return {
                 signData : [],
                 search: "",
-                signSortType: "AZName"
+                signSortType: "Dates"
             }
         },
 
@@ -62,7 +62,7 @@
         <br><br>
         <label for="sign-sort">Sort by : </label>
         <select v-model="signSortType" id="sign-sort">
-            <option value="Dates">By date</option>
+            <option value="Dates">Date</option>
             <option value="AZName">Signs A-Z</option>
             <option value="ZAName">Signs Z-A</option>
 
@@ -74,6 +74,7 @@
       <SignPreview  
         :sign_logo="sign.sign_logo"
         :sign_name="sign.sign_name"
+        :sign_img ="sign.sign_img"
         :date_range="sign.date_range"
         :mood="sign.mood"
         :description="sign.description"
@@ -89,7 +90,7 @@
 
 <style scoped>
     label{
-        color:rgb(255, 255, 255);
+        color:rgb(0, 0, 0);
     }
 
     input {

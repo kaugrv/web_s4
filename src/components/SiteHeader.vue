@@ -14,12 +14,13 @@
 <style scoped>
   h1 {
       margin: auto;
-      color: aliceblue;
+      color: rgb(1, 2, 3);
       font-size: 7vw;
       font-family:'Futura Round Cond Light';
   }
 
   .logo {
+    filter:invert(1);
     width: 4vw;
   }
 </style>

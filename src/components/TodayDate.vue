@@ -30,7 +30,7 @@
 
 <style scoped>
     .today-date {
-        color: aliceblue;
+        color: rgb(0, 0, 0);
         font-size: 1.5vw;
         font-family:'Futura Round Cond Light'
     }
