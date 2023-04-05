@@ -62,23 +62,20 @@
     margin-left: 0;
     padding: 3vh 2vw;
     background-color: rgba(229, 225, 194, 0.69);
-    
     overflow: hidden;
-    transition: 1s;
+    transition: 0.5s linear;
     backdrop-filter: blur(1px);
     flex: 1;
   }
 
   .SignPreview:hover {
-    color:black;
     box-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.137);
-    backdrop-filter: blur(10px);
-    transition: 1s;
+
+    transition: 0.5s linear;
+
   }
 
 
-  .SignImage {
-  }
   .sign-img {
     height: 24vh;
     margin: 0;

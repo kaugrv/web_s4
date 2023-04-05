@@ -1,6 +1,7 @@
 <script>
     import SignPreview from './SignPreview.vue';
     import {getSignData}from '@/services/api/signRepository.js'
+    import {getNASAPics} from '@/services/api/getNASAPics.js';
 
     export default {
         name: 'SignGallery',
@@ -33,13 +34,17 @@
         data() {
             return {
                 signData : [],
+                NASAPics : [],
                 search: "",
                 signSortType: "Dates"
             }
         },
 
-        created: function() {
-            this.retrieveSignData()
+        created: 
+        function() {
+            this.retrieveSignData();
+            
+            this.retrievesNASAPics();
         },
         
         methods: {
@@ -48,6 +53,14 @@
             },
             async retrieveSignData() {
                 this.signData = await getSignData()
+            },
+            async retrievesNASAPics() {
+                  try {
+                        this.NASAPics = await getNASAPics();
+                    } catch (error) {
+                        console.error(error);
+                        alert("Failed to retrieve NASA pics. Please try again later.");
+                    }
             }
         }
     }
@@ -70,8 +83,8 @@
     </div>
 
     <div class="sign-gallery">
-    <div v-for="sign in signOrganizedData" :key="sign.sign_name">
-      <SignPreview  
+    <div v-for="sign in signOrganizedData" :key="sign.sign_name" class="gallery-preview">
+      <SignPreview 
         :sign_logo="sign.sign_logo"
         :sign_name="sign.sign_name"
         :sign_img ="sign.sign_img"
@@ -109,8 +122,21 @@
     .sign-gallery {
         display: grid; 
         position: relative;
-        grid-template-columns: 31vw 31vw 31vw;   
+        grid-template-columns: 33% 33% 33%;   
         margin-left: auto;
         margin-right: auto;
     }
+
+    .gallery-preview{
+        transition: 0.5s linear;
+
+    }
+
+    .sign-gallery:hover > .gallery-preview:not(:hover) {
+        filter:blur(3px);
+        backdrop-filter: blur(3px);
+        transition: 0.5s linear;
+    }
+
+
 </style>
