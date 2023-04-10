@@ -2,13 +2,15 @@
   import SiteHeader from './components/SiteHeader.vue';
   import TodayDate from './components/TodayDate.vue';
   import SignGallery from './components/SignGallery.vue';
+  import SiteFooter from './components/SiteFooter.vue';
 
   export default {
     name: 'App',
     components: {
       SiteHeader,
       TodayDate,
-      SignGallery
+      SignGallery,
+      SiteFooter
     }
   }
 </script>
@@ -16,9 +18,9 @@
 <title>Astrovue</title>
 
 <template>
-  <SiteHeader site_title="Astrovue"/>
-  <TodayDate/>
+  <SiteHeader site_title="Astrovue"/><TodayDate/>
   <SignGallery/>
+  <SiteFooter/>
 </template>
 
 <style>

@@ -128,14 +128,14 @@
     }
 
     .gallery-preview{
-        transition: 0.5s linear;
+        transition: 0.2s linear;
 
     }
 
     .sign-gallery:hover > .gallery-preview:not(:hover) {
-        filter:blur(3px);
-        backdrop-filter: blur(3px);
-        transition: 0.5s linear;
+        filter:grayscale(100%);
+        backdrop-filter: blur(1px);
+        transition: 0.1s linear;
     }
 
 
