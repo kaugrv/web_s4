@@ -18,7 +18,8 @@
 <title>Astrovue</title>
 
 <template>
-  <SiteHeader site_title="Astrovue"/><TodayDate/>
+  <SiteHeader site_title="Astrovue"/>
+  <TodayDate/>
   <SignGallery/>
   <SiteFooter/>
 </template>
@@ -33,11 +34,11 @@
   }
 
   body {
-    background-image: url("./assets/background.jpg") ;
+    /* background-image: url("./assets/background.jpg") ;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: rgb(33, 23, 23);
+    background-attachment: fixed;*/
+    background-color: rgb(255, 238, 191); 
   }
 
   ::selection{

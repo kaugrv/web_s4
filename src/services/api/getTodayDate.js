@@ -1,4 +1,6 @@
 
+// Communicates with TwinFlame API to get today's date.
+
 const getTodayDate = async function () {
 
     const tab = [];

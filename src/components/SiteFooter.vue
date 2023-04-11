@@ -1,5 +1,5 @@
 <template>
-  <div class="Footer"><img class ="logo-imac" src="https://www.ingenieur-imac.fr/images/logoIMAC.png"> S4 IMAC Project, 2023 | <a href="https://github.com/kaugrv/web_s4">GitHub</a> | Horoscope by <a href="https://github.com/TwinFlame-Development/horoscopeAPI">TwinFlame API</a>
+  <div class="Footer"><img class ="logo-imac" src="https://www.ingenieur-imac.fr/images/logoIMAC.png"> S4 IMAC Project, 2023 | <a href="https://github.com/kaugrv/web_s4">GitHub</a> | Horoscope by <a href="https://github.com/TwinFlame-Development/horoscopeAPI">TwinFlame API</a>  | Astronomy by <a href="http://www.wikisky.org/ImageGenerator_1.0.html">wikisky.org</a>
   </div>
 </template>
 
