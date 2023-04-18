@@ -27,7 +27,7 @@ const getSignData = async function () {
 
   signs.forEach(function(sign) {
     urls.push("https://us-central1-tf-natal.cloudfunctions.net/horoscopeapi_test?token=" + token +"&date=today&range&sign="+ sign.toLocaleLowerCase())
-    urls_img.push("http://server2.sky-map.org/map?angel=" + zodiac[sign].angel + "&ra=" + zodiac[sign].ra + "&de=" + zodiac[sign].de + "&show_grid=0&show_const_lines=1&constellation_lines_color=FFFFFF&w=300&h=300&zoom=2");
+    urls_img.push("http://server2.sky-map.org/map?angel=" + zodiac[sign].angel + "&ra=" + zodiac[sign].ra + "&de=" + zodiac[sign].de + "&show_grid=0&show_const_lines=1&constellation_lines_color=ffffff&w=800&h=800&background_color=%23E3DDBE&constellation_lines_width=5");
   });
 
   const tab = [];

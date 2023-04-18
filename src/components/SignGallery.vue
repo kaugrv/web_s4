@@ -7,6 +7,7 @@
         components: {
             SignPreview
 		},
+
         computed: {
             signOrganizedData: function() {
                 const filterFunc = (a) => a.sign_name.toLowerCase().includes(this.search.toLowerCase());
@@ -60,7 +61,7 @@
     <div class="gallery-options">
         <input type="text" v-model="search" placeholder="What is your sign?">			
         <button  @click="cleanSearch"> X </button>
-        <br><br>
+        <br><br><br>
         <label for="sign-sort">Sort by : </label>
         <select v-model="signSortType" id="sign-sort">
             <option value="Dates">Date</option>
@@ -107,23 +108,17 @@
         border-radius: 5px;
         padding: 12px;    
     }
+
+    .gallery-options {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
     .sign-gallery {
+        justify-content: center;
         display: grid; 
-        position: relative;
-        grid-template-columns: 33% 33% 33%;   
-        margin-left: auto;
-        margin-right: auto;
+        position: center;
+        grid-template-columns: 36% 36%;   
     }
-/* 
-    .gallery-preview{
-        transition: 0.2s linear;
-    }
-
-    .sign-gallery:hover > .gallery-preview:not(:hover) {
-        filter:grayscale(100%);
-        backdrop-filter: blur(1px);
-        transition: 0.1s linear;
-    } */
-
 
 </style>

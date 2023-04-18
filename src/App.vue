@@ -1,48 +1,45 @@
+
+<title>Astrovue</title>
+
 <script>
   import SiteHeader from './components/SiteHeader.vue';
-  import TodayDate from './components/TodayDate.vue';
   import SignGallery from './components/SignGallery.vue';
   import SiteFooter from './components/SiteFooter.vue';
-
+    
   export default {
     name: 'App',
     components: {
       SiteHeader,
-      TodayDate,
       SignGallery,
       SiteFooter
     }
   }
 </script>
 
-<title>Astrovue</title>
-
 <template>
   <SiteHeader site_title="Astrovue"/>
-  <TodayDate/>
   <SignGallery/>
   <SiteFooter/>
 </template>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+  
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-    padding-left : 2vw;
   }
 
   body {
     /* background-image: url("./assets/background.jpg") ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;*/
-    background-color: rgb(255, 238, 191); 
+    background-position: fixed;
+    background-repeat: no-repeat; */
+    background-color: rgb(43, 36, 13); 
   }
 
   ::selection{
-    background-color : #f0a67896;
-    color : #fff
+    background-color : #ffffff96;
+    color : #000000
 }
 </style>
