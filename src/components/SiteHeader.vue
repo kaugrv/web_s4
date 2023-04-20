@@ -1,9 +1,12 @@
 <template>
   <div class ="site-header">
     
-    <span class="title"><img src="../assets/logo.png" class="logo"/>  {{ site_title }}</span>
+    <span class="title"><img src="../assets/logo.png" class="logo"/>  {{ site_title }} </span>     
+
     <br>
-    <span class="today-date" v-if="$data.dateData.hasOwnProperty(0)"><b>Today's date : </b>{{dateData[0].current_date}}</span>
+
+    <span class="today-date" v-if="$data.dateData.hasOwnProperty(0)"><b>Today's date : </b>{{dateData}}</span>
+
 </div> 
 
 </template>

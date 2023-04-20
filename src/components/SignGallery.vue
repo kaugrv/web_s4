@@ -58,10 +58,18 @@
 
 <template>
     <br>
+    
     <div class="gallery-options">
         <input type="text" v-model="search" placeholder="What is your sign?">			
         <button  @click="cleanSearch"> X </button>
-        <br><br><br>
+
+            
+        <br>
+        <br> 
+        ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓
+        <br> 
+        <br>
+
         <label for="sign-sort">Sort by : </label>
         <select v-model="signSortType" id="sign-sort">
             <option value="Dates">Date</option>
@@ -69,6 +77,8 @@
             <option value="ZAName">Signs Z-A</option>
         </select>
     </div>
+    
+    <br>    
 
     <div class="sign-gallery">
     <div v-for="sign in signOrganizedData" :key="sign.sign_name" class="gallery-preview">
@@ -92,11 +102,11 @@
 
 <style scoped>
     label{
-        color:rgb(0, 0, 0);
+        font-family: 'Amatic SC', cursive;
+        color: aliceblue;
     }
 
     input {
-        color: inherit;
         padding: 12px;
         width: 30vw;
         border-radius: 5px;
@@ -109,16 +119,9 @@
         padding: 12px;    
     }
 
-    .gallery-options {
-        display: flex;
-        justify-content: center;
-        align-items: center;  
-    }
     .sign-gallery {
-        justify-content: center;
         display: grid; 
-        position: center;
-        grid-template-columns: 36% 36%;   
+        grid-template-columns: 32.8333vw 32.8333vw 32.8333vw;
     }
 
 </style>

@@ -35,7 +35,7 @@
     /* background-image: url("./assets/background.jpg") ;
     background-position: fixed;
     background-repeat: no-repeat; */
-    background-color: rgb(43, 36, 13); 
+    background-color: #bfb99a; 
   }
 
   ::selection{
