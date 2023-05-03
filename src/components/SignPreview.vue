@@ -29,16 +29,24 @@
     <div class="SignPreview" :style="{ backgroundImage: skyImageUrl }">
         <h2>{{ sign_logo }}{{ sign_name }}</h2>
 
-        <h3>{{ mood }}</h3>
-        <div>{{ description }}</div>
+        <div class = "sign-description">{{ description }}</div>
 
         <br>
 
-        <div class="sign-numbers">
-             <b>🎨 Color :</b> {{ color }}<br>
-             <b>🔢 Lucky number :</b> {{ lucky_number }}<br>
-             <b>🕒 Lucky time :</b> {{ lucky_time }}   
-      </div>
+        <div class ="mood-number">        
+          <h3>{{ mood }}</h3>
+
+          <div class="sign-numbers">
+          <b>🎨 Color :</b> {{ color }}<br>
+          <b>🔢 Lucky number :</b> {{ lucky_number }}<br>
+          <b>🕒 Lucky time :</b> {{ lucky_time }}   
+
+        </div>
+
+    </div>
+
+        
+
     </div>
   </div>
 </template>
@@ -53,7 +61,13 @@
 
   h3 {
     font-size: 3em;
+  }
 
+  .mood-number {
+  }
+
+  .mood-number h3 {
+    margin: 0;
   }
 
   .SignCard {
@@ -72,12 +86,17 @@
     background-position: center;
 
   }
+
+  .sign-description {
+    font-size: 1.4em  ;
+  }
   .sign-img {
     height: 35vh;
   }
 
   .sign-numbers {
     font-size:1.5em;  
+    
   }
 
 </style>
