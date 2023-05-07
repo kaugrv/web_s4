@@ -2,10 +2,9 @@
   <div class ="site-header">
     
     <span class="title"><img src="../assets/logo.png" class="logo"/>  {{ site_title }} </span>     
-
     <br>
-
-    <span class="today-date" v-if="$data.dateData.hasOwnProperty(0)"><b>Today's date : </b>{{dateData}}</span>
+     <span class="today-date" v-if="$data.dateData.hasOwnProperty(0)">
+      <a href="#my-sign">My Sign</a> | <a href="#all-signs">All Signs</a> | <b>Today's date : </b>{{dateData}}</span>
 
 </div> 
 
@@ -42,8 +41,8 @@
 <style scoped>
 
   .site-header {
-    background-color: #E3DDBE;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px) brightness(105%);
+    border-radius: 30px;
     padding: 0.8%;  
     margin : 0
   }

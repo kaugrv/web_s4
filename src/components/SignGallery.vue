@@ -1,10 +1,12 @@
 <script>
     import SignPreview from './SignPreview.vue';
-    import {getSignData}from '@/services/api/signRepository.js'
+    import MySign from './MySign.vue';
+    import {getSignData} from '@/services/api/signRepository.js'
 
     export default {
         name: 'SignGallery',
         components: {
+            MySign,
             SignPreview
 		},
 
@@ -61,37 +63,27 @@
 
 <template>
  
-    <h2>My Sign</h2> <label for="birth-date"> Your birthdate (MM-DD-YYYY) : </label>
-    <input type="date" id="birth-date" name="birth-date"
-       value="2000-01-01"
-       min="1900-01-01" >
-    <div>
-      <SignPreview class="my-sign"
-        :sign_logo="signOrganizedData[0].sign_logo"
-        :sign_name="signOrganizedData[0].sign_name"
-        :sign_img ="signOrganizedData[0].sign_img"
-        :date_range="signOrganizedData[0].date_range"
-        :mood="signOrganizedData[0].mood"
-        :description="signOrganizedData[0].description"
-        :color="signOrganizedData[0].color"
-        :lucky_number="signOrganizedData[0].lucky_number"
-        :lucky_time="signOrganizedData[0].lucky_time"
-        :sky_img_url="signOrganizedData[0].sky_img_url"
-      />
-    </div>
 
+    <MySign :sign="signData"/>
 
-    <h2>All Signs</h2>
-        
+    <h2 id="all-signs">All Signs</h2>
     <div class="gallery-options">
         <input type="text" v-model="search" placeholder="Search for a sign...">			
-        <button  @click="cleanSearch"> X </button> ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓
-
-            
+        <button @click="fillSearch('Aries')">♈</button>
+        <button @click="fillSearch('Taurus')">♉</button>
+        <button @click="fillSearch('Gemini')">♊</button>
+        <button @click="fillSearch('Cancer')">♋</button>
+        <button @click="fillSearch('Leo')">♌</button>
+        <button @click="fillSearch('Virgo')">♍</button>
+        <button @click="fillSearch('Libra')">♎</button>
+        <button @click="fillSearch('Scorpio')">♏</button>
+        <button @click="fillSearch('Sagittarius')">♐</button>
+        <button @click="fillSearch('Capricorn')">♑</button>
+        <button @click="fillSearch('Aquarius')">♒</button>
+        <button @click="fillSearch('Pisces')">♓</button>
+        <button  @click="cleanSearch"> X </button> 
         <br>
         <br> 
-  
-
         <label for="sign-sort">Sort by : </label>
         <select v-model="signSortType" id="sign-sort">
             <option value="Dates">Date</option>
@@ -104,8 +96,6 @@
     <br>
     
     <div class="sign-gallery">
-
-
     <div v-for="sign in signOrganizedData" :key="sign.sign_name"   >
       <SignPreview 
         :sign_logo="sign.sign_logo"
@@ -126,9 +116,8 @@
 
 
 <style scoped>
-    label{
-        font-family: 'Amatic SC', cursive;
-        color: aliceblue;
+    label {
+      font-family:'Futura Round Cond Light';
     }
 
     input {
@@ -137,6 +126,7 @@
         border-radius: 5px;
         border: none;
         outline: none;
+        font-family:'Futura Round Cond Light';
     }
 
     button {
