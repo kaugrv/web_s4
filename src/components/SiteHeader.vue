@@ -1,11 +1,9 @@
 <template>
-  <div class ="site-header">
-    
+<div class ="site-header">
     <span class="title"><img src="../assets/logo.png" class="logo"/>  {{ site_title }} </span>     
     <br>
      <span class="today-date" v-if="$data.dateData.hasOwnProperty(0)">
       <a href="#my-sign">My Sign</a> | <a href="#all-signs">All Signs</a> | <b>Today's date : </b>{{dateData}}</span>
-
 </div> 
 
 </template>

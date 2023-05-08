@@ -1,5 +1,6 @@
 
 // Communicates with TwinFlame API and gets all signs data.
+// Gets constellations images from wikisky.
 
 const getSignData = async function () {
 
@@ -22,8 +23,6 @@ const getSignData = async function () {
   "Aquarius": { "angel": 20, "ra": 23, "de": -15 },
   "Pisces": { "angel": 20, "ra": 1, "de": -10 }
 };
-
- 
 
   signs.forEach(function(sign) {
     urls.push("https://us-central1-tf-natal.cloudfunctions.net/horoscopeapi_test?token=" + token +"&date=today&range&sign="+ sign.toLocaleLowerCase())

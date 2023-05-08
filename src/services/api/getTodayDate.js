@@ -1,5 +1,5 @@
 
-// Communicates with TwinFlame API to get today's date.
+// Communicates with TwinFlame API to get today's date. (DD-MM-YYYY format)
 
 const getTodayDate = async function () {
 

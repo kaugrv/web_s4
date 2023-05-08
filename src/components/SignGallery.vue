@@ -96,20 +96,21 @@
     <br>
     
     <div class="sign-gallery">
-    <div v-for="sign in signOrganizedData" :key="sign.sign_name"   >
-      <SignPreview 
-        :sign_logo="sign.sign_logo"
-        :sign_name="sign.sign_name"
-        :sign_img ="sign.sign_img"
-        :date_range="sign.date_range"
-        :mood="sign.mood"
-        :description="sign.description"
-        :color="sign.color"
-        :lucky_number="sign.lucky_number"
-        :lucky_time="sign.lucky_time"
-        :sky_img_url="sign.sky_img_url"
-      />
-    </div>
+
+        <div v-for="sign in signOrganizedData" :key="sign.sign_name"   >
+        <SignPreview 
+            :sign_logo="sign.sign_logo"
+            :sign_name="sign.sign_name"
+            :sign_img ="sign.sign_img"
+            :date_range="sign.date_range"
+            :mood="sign.mood"
+            :description="sign.description"
+            :color="sign.color"
+            :lucky_number="sign.lucky_number"
+            :lucky_time="sign.lucky_time"
+            :sky_img_url="sign.sky_img_url"
+        />
+        </div>
 
     </div>
 </template>

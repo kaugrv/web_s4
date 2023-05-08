@@ -3,7 +3,6 @@
 
 <script>
   import SiteHeader from './components/SiteHeader.vue';
-
   import SignGallery from './components/SignGallery.vue';
   import SiteFooter from './components/SiteFooter.vue';
     
@@ -17,11 +16,13 @@
   }
 </script>
 
-<template>
-  <SiteHeader site_title="Astrovue"/>
-  <SignGallery/>
-  <SiteFooter/>
-</template>
+  <template>
+
+    <SiteHeader site_title="Astrovue"/>
+    <SignGallery/>
+    <SiteFooter/>
+
+  </template>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');

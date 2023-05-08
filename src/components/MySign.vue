@@ -9,15 +9,26 @@
     props:['sign'],
     data() {
       return {
-        birthdate : "2001-01-01",
-        my_sign: this.getSign()
+        birthdate : sessionStorage.getItem('birthdate') || "2001-01-01",
       }
     },
-    watch: {
-    birthdate() {
-      this.my_sign = this.getSign();
+
+    computed: {
+      my_sign() {
+       return this.getSign();
+      }
     },
+
+
+
+    watch: {
+      birthdate() {
+        sessionStorage.setItem('birthdate', this.birthdate);
+        this.my_sign = this.getSign();
+      },
   },
+
+  
 
     methods:{      
         getSign() {
@@ -54,27 +65,23 @@
             } else {
                 zodiac_sign = "Pisces";
             }
-
-                const my_sign = this.sign.find((s) => s.sign_name === zodiac_sign);
-                return my_sign || null; // return null if sign is not found
+              const my_sign = this.sign.find((s) => s.sign_name === zodiac_sign);
+              return my_sign; // return null if sign is not found
             }
 
         },
-        getMySign() {
-            this.my_sign = this.getSign();
-    }
     
   };
 
 </script>
 
 <template>    
+    <div>
     <h2 id="my-sign">My Sign</h2> 
     <label for="birth-date"> Your birthdate : </label>
     <input type="date" id="birth-date" name="birth-date" v-model="birthdate">
   
-    <div>
-      <SignPreview
+      <SignPreview v-if="my_sign"
         class="my-sign"
         :sign_logo="my_sign.sign_logo"
         :sign_name="my_sign.sign_name"
