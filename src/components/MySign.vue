@@ -19,8 +19,6 @@
       }
     },
 
-
-
     watch: {
       birthdate() {
         sessionStorage.setItem('birthdate', this.birthdate);
@@ -76,13 +74,17 @@
 </script>
 
 <template>    
-    <div>
-    <h2 id="my-sign">My Sign</h2> 
-    <label for="birth-date"> Your birthdate : </label>
+    <div class="my-sign" id="my-sign">
+
+    <h2>.*･｡ﾟ My Sign ﾟ.*･｡ﾟ </h2> 
+    <label for="birth-date"> My birthday : </label>
     <input type="date" id="birth-date" name="birth-date" v-model="birthdate">
+    <br>
+    <br><br>
   
-      <SignPreview v-if="my_sign"
-        class="my-sign"
+
+
+        <SignPreview v-if="my_sign" 
         :sign_logo="my_sign.sign_logo"
         :sign_name="my_sign.sign_name"
         :sign_img="my_sign.sign_img"
@@ -91,13 +93,23 @@
         :color="my_sign.color"
         :lucky_number="my_sign.lucky_number"
         :lucky_time="my_sign.lucky_time"
-        :sky_img_url="my_sign.sky_img_url"
-      />
+        :sky_img_url="my_sign.sky_img_url"/>
+
     </div>
   </template>
 
 <style scoped>
-    h2 {
+
+  .my-sign {
+    margin: auto;
+  }
+
+  h2 {
+        text-align: center;
         font-family: 'Amatic SC', cursive;
+        font-size: 3em;
+        margin-bottom : 1vh;
     }
+
+
 </style>

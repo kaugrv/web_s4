@@ -66,9 +66,13 @@
 
     <MySign :sign="signData"/>
 
-    <h2 id="all-signs">All Signs</h2>
+    <h2 id="all-signs">ﾟ.*･｡ﾟ All Signs ﾟ.*･｡ﾟ </h2>
     <div class="gallery-options">
-        <input type="text" v-model="search" placeholder="Search for a sign...">			
+        
+
+
+    <div class="search-div">
+        <input type="text" v-model="search" placeholder="Search for a sign... ">			
         <button @click="fillSearch('Aries')">♈</button>
         <button @click="fillSearch('Taurus')">♉</button>
         <button @click="fillSearch('Gemini')">♊</button>
@@ -82,14 +86,15 @@
         <button @click="fillSearch('Aquarius')">♒</button>
         <button @click="fillSearch('Pisces')">♓</button>
         <button  @click="cleanSearch"> X </button> 
-        <br>
-        <br> 
-        <label for="sign-sort">Sort by : </label>
+    </div>
+
+    <label for="sign-sort">Sort by : </label>
         <select v-model="signSortType" id="sign-sort">
             <option value="Dates">Date</option>
             <option value="AZName">Signs A-Z</option>
             <option value="ZAName">Signs Z-A</option>
         </select>
+
     </div>
           
     <br> 
@@ -117,9 +122,6 @@
 
 
 <style scoped>
-    label {
-      font-family:'Futura Round Cond Light';
-    }
 
     input {
         padding: 12px;
@@ -127,12 +129,24 @@
         border-radius: 5px;
         border: none;
         outline: none;
-        font-family:'Futura Round Cond Light';
     }
 
     button {
         border-radius: 5px;
         padding: 12px;    
+        border: #E3DDBE;
+        background-color: #E3DDBE;
+        cursor: pointer;
+    }
+
+    button:hover {
+        border: #2f2d23;
+        background-color: #fffade;
+    }
+
+    button:active {
+        background-color: #fefefc;
+
     }
 
     .sign-gallery {
@@ -141,10 +155,13 @@
     }
 
     h2 {
+        text-align: center;
         font-family: 'Amatic SC', cursive;
+        font-size: 3em;
     }
     .my-sign {
         width: 32.83333vw;
     }
+
 
 </style>

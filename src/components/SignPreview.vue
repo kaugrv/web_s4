@@ -74,6 +74,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+
   }
 
   .SignPreview {
@@ -84,14 +86,18 @@
     margin-left: 0;
     background-size: cover;
     background-position: center;
+    border-radius: 0px 30px 30px 0px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
 
   }
+
 
   .sign-description {
     font-size: 1.4em  ;
   }
   .sign-img {
     height: 35vh;
+    border-radius: 30px 0px 0px 30px;
   }
 
   .sign-numbers {

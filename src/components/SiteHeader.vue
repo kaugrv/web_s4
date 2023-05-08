@@ -1,10 +1,13 @@
 <template>
-<div class ="site-header">
-    <span class="title"><img src="../assets/logo.png" class="logo"/>  {{ site_title }} </span>     
-    <br>
-     <span class="today-date" v-if="$data.dateData.hasOwnProperty(0)">
-      <a href="#my-sign">My Sign</a> | <a href="#all-signs">All Signs</a> | <b>Today's date : </b>{{dateData}}</span>
-</div> 
+
+  <div class ="site-header">
+      <span class="title"><img src="../assets/logo.png" class="logo"/> °. ･｡  {{ site_title }}  ˖° ✧･｡ﾟ  </span>     
+      <br><br>
+      <div class ="site-header">
+      <span class="today-date" v-if="$data.dateData.hasOwnProperty(0)">
+        <a href="#my-sign">✧ My Sign</a> | <a href="#all-signs">☆ All Signs</a> | <b>Today's date : </b>{{dateData}}</span>
+      </div> 
+  </div> 
 
 </template>
 
@@ -39,10 +42,13 @@
 <style scoped>
 
   .site-header {
-    backdrop-filter: blur(2px) brightness(105%);
+    backdrop-filter: blur(2px);
     border-radius: 30px;
-    padding: 0.8%;  
-    margin : 0
+    background-color: #e3ddbe36;
+    border-color: rgb(0, 0, 0);
+    padding: 1%;   
+    margin : 0;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
   }
 
  .title {
