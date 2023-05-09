@@ -1,4 +1,5 @@
 <script>
+
     import SignPreview from './SignPreview.vue';
     import MySign from './MySign.vue';
     import {getSignData} from '@/services/api/signRepository.js'
@@ -8,7 +9,7 @@
         components: {
             MySign,
             SignPreview
-		},
+        },
 
         computed: {
             signOrganizedData: function() {
@@ -30,7 +31,7 @@
                 }
                 
                 return organizeddata
-        }
+            }
         },
 
         data() {
@@ -63,58 +64,57 @@
 
 <template>
  
-
     <MySign :sign="signData"/>
 
     <h2 id="all-signs">ﾟ.*･｡ﾟ All Signs ﾟ.*･｡ﾟ </h2>
+    
     <div class="gallery-options">
-        
 
+        <div class="search-div">
+            <input type="text" v-model="search" placeholder="Search for a sign... ">			
+            <button @click="fillSearch('Aries')" >♈</button>
+            <button @click="fillSearch('Taurus')">♉</button>
+            <button @click="fillSearch('Gemini')">♊</button>
+            <button @click="fillSearch('Cancer')">♋</button>
+            <button @click="fillSearch('Leo')">♌</button>
+            <button @click="fillSearch('Virgo')">♍</button>
+            <button @click="fillSearch('Libra')">♎</button>
+            <button @click="fillSearch('Scorpio')">♏</button>
+            <button @click="fillSearch('Sagittarius')">♐</button>
+            <button @click="fillSearch('Capricorn')">♑</button>
+            <button @click="fillSearch('Aquarius')">♒</button>
+            <button @click="fillSearch('Pisces')">♓</button>
+            <a href="#all-signs"><button  @click="cleanSearch"> X </button></a> 
+        </div>
 
-    <div class="search-div">
-        <input type="text" v-model="search" placeholder="Search for a sign... ">			
-        <button @click="fillSearch('Aries')">♈</button>
-        <button @click="fillSearch('Taurus')">♉</button>
-        <button @click="fillSearch('Gemini')">♊</button>
-        <button @click="fillSearch('Cancer')">♋</button>
-        <button @click="fillSearch('Leo')">♌</button>
-        <button @click="fillSearch('Virgo')">♍</button>
-        <button @click="fillSearch('Libra')">♎</button>
-        <button @click="fillSearch('Scorpio')">♏</button>
-        <button @click="fillSearch('Sagittarius')">♐</button>
-        <button @click="fillSearch('Capricorn')">♑</button>
-        <button @click="fillSearch('Aquarius')">♒</button>
-        <button @click="fillSearch('Pisces')">♓</button>
-        <button  @click="cleanSearch"> X </button> 
-    </div>
+        <br>
 
-    <label for="sign-sort">Sort by : </label>
-        <select v-model="signSortType" id="sign-sort">
-            <option value="Dates">Date</option>
-            <option value="AZName">Signs A-Z</option>
-            <option value="ZAName">Signs Z-A</option>
+        <label for="sign-sort">Sort by : </label>
+            <select v-model="signSortType" id="sign-sort">
+                <option value="Dates">Date</option>
+                <option value="AZName">Signs A-Z</option>
+                <option value="ZAName">Signs Z-A</option>
         </select>
 
     </div>
           
-    <br> 
     <br>
     
     <div class="sign-gallery">
 
-        <div v-for="sign in signOrganizedData" :key="sign.sign_name"   >
-        <SignPreview 
-            :sign_logo="sign.sign_logo"
-            :sign_name="sign.sign_name"
-            :sign_img ="sign.sign_img"
-            :date_range="sign.date_range"
-            :mood="sign.mood"
-            :description="sign.description"
-            :color="sign.color"
-            :lucky_number="sign.lucky_number"
-            :lucky_time="sign.lucky_time"
-            :sky_img_url="sign.sky_img_url"
-        />
+        <div v-for="sign in signOrganizedData" :key="sign.sign_name" >
+            <SignPreview 
+                :sign_logo="sign.sign_logo"
+                :sign_name="sign.sign_name"
+                :sign_img ="sign.sign_img"
+                :date_range="sign.date_range"
+                :mood="sign.mood"
+                :description="sign.description"
+                :color="sign.color"
+                :lucky_number="sign.lucky_number"
+                :lucky_time="sign.lucky_time"
+                :sky_img_url="sign.sky_img_url"
+            />
         </div>
 
     </div>
@@ -122,6 +122,12 @@
 
 
 <style scoped>
+
+    select  {
+        font-family: 'Futura Round';
+        border: 0;
+        background-color: #efefef;
+    }
 
     input {
         padding: 12px;
@@ -134,6 +140,7 @@
     button {
         border-radius: 5px;
         padding: 12px;    
+        margin: 0.5%;
         border: #E3DDBE;
         background-color: #E3DDBE;
         cursor: pointer;
@@ -146,7 +153,15 @@
 
     button:active {
         background-color: #fefefc;
+    }
 
+    
+    .gallery-options {
+        padding: 1%;  
+        backdrop-filter: blur(2px);
+        border-radius: 30px;
+        background-color: #e3ddbe36;
+        box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .sign-gallery {
@@ -157,24 +172,26 @@
     h2 {
         text-align: center;
         font-family: 'Amatic SC', cursive;
-        font-size: 3em;
+        font-size: 3.3em;
     }
+
     .my-sign {
         width: 32.83333vw;
     }
 
     @media (max-width: 640px) {
-    .sign-gallery {
-        display: flex; 
-        flex-direction: column;
-    }
-    .my-sign {
-        width: 300px;
-    }
+        .sign-gallery {
+            display: flex; 
+            flex-direction: column;
+        }
+        
+        .my-sign {
+            width: 300px;
+        }
 
-    h2 {
-        font-size: 2em;
+        h2 {
+            font-size: 2em;
+        }
     }
-}
 
 </style>

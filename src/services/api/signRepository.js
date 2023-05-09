@@ -6,6 +6,7 @@ const getSignData = async function () {
 
   let signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
   let logos = ["♈️", "♉️", "♊️", "♋️", "♌️", "♍️", "♎️", "♏️", "♐️", "♑️", "♒️", "♓️"];
+  let types = ["🔥 Fire", "⛰️ Earth", "🌬️ Air", "💧 Water"];
   let urls = []
   let urls_img = []
   let token = "mmEUtLATc8w_UNnHuR2"
@@ -41,7 +42,7 @@ const getSignData = async function () {
         data.sign_logo = logos[i];
         data.sign_img = require("../../assets/"+signs[i]+".png");
         data.sky_img_url = urls_img[i];
-
+        data.sign_type = types[i%4];
         tab.push(data);
     } else {
       throw new Error(response.statusText);
