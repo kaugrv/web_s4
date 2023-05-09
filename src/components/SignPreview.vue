@@ -75,12 +75,11 @@
     flex-direction: row;
     align-items: center;
 
-
   }
 
   .SignPreview {
     color:rgb(0, 0, 0);
-    font-size: 0.4em;
+    font-size: 0.5em;
     height: 35vh;
     margin:  1vh 1vw ;
     margin-left: 0;
@@ -88,6 +87,10 @@
     background-position: center;
     border-radius: 0px 30px 30px 0px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    scrollbar-width: thin;
+    
+    scrollbar-color: #dad3af #e3ddbe ;
 
   }
 

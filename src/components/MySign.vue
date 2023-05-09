@@ -76,14 +76,15 @@
 <template>    
     <div class="my-sign" id="my-sign">
 
-    <h2>.*･｡ﾟ My Sign ﾟ.*･｡ﾟ </h2> 
-    <label for="birth-date"> My birthday : </label>
-    <input type="date" id="birth-date" name="birth-date" v-model="birthdate">
-    <br>
-    <br><br>
-  
+      <br>
+      <br><br>
 
+      <div class="birthday"><label for="birth-date"> My birthday : </label>
+      <input type="date" id="birth-date" name="birth-date" v-model="birthdate"></div>
 
+      <div class="three-cards">
+        <div>      
+      <h2>.*･｡ﾟ My Sign ﾟ.*･｡ﾟ </h2> 
         <SignPreview v-if="my_sign" 
         :sign_logo="my_sign.sign_logo"
         :sign_name="my_sign.sign_name"
@@ -93,15 +94,37 @@
         :color="my_sign.color"
         :lucky_number="my_sign.lucky_number"
         :lucky_time="my_sign.lucky_time"
-        :sky_img_url="my_sign.sky_img_url"/>
+        :sky_img_url="my_sign.sky_img_url"/></div>
 
-    </div>
+        <div><h2>.*･｡ﾟ  Sign Type ﾟ.*･｡ﾟ 
+          <span class="sign-type">△ <br>Water</span></h2> </div>
+    </div></div>
   </template>
 
 <style scoped>
 
+.birthday {
+  text-align: center;
+}
+
+.sign-type {
+  font-size: xx-large;
+  text-align: center;
+  height: 35vh; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-reflect: right;
+  text-shadow: #FC0 1px 0 10px;
+}
   .my-sign {
     margin: auto;
+  }
+
+  .three-cards {
+    display: grid; 
+        grid-template-columns: 32.8333vw 32.8333vw 32.8333vw;
+
   }
 
   h2 {
@@ -111,5 +134,11 @@
         margin-bottom : 1vh;
     }
 
+    @media (max-width: 640px) {
+
+    h2 {
+        font-size: 2em;
+    }
+}
 
 </style>

@@ -163,5 +163,18 @@
         width: 32.83333vw;
     }
 
+    @media (max-width: 640px) {
+    .sign-gallery {
+        display: flex; 
+        flex-direction: column;
+    }
+    .my-sign {
+        width: 300px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
 
 </style>

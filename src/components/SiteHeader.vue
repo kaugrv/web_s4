@@ -49,6 +49,7 @@
     padding: 1%;   
     margin : 0;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
 
  .title {
@@ -68,6 +69,13 @@
       font-size: 1.2em;
       font-family:'Futura Round Cond Light';
 
+  }
+
+  
+  @media (max-width: 640px) {
+    .title {
+      font-size: 2.2em;
+    }
   }
     
 </style>
