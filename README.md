@@ -4,9 +4,12 @@
 A simple Vue JS horoscope visualisation website!  
 ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ 
 
- S4 IMAC Project, 2023 | Horoscope by [TwinFlame API](https://github.com/TwinFlame-Development/horoscopeAPI) | Astronomy by [wikisky.org](http://www.wikisky.org/ImageGenerator_1.0.html) *･｡ﾟ 
- 
- ![image](https://github.com/kaugrv/web_s4/assets/103901906/7ecb411e-4831-4cf0-aa90-55384220e61b)
+ S4 IMAC Project, 2023  
+ Horoscope by [TwinFlame API](https://github.com/TwinFlame-Development/horoscopeAPI)   
+ Astronomy by [wikisky.org](http://www.wikisky.org/ImageGenerator_1.0.html) *･｡ﾟ 
+
+![ezgif-5-dc6fbe2a84](https://github.com/kaugrv/web_s4/assets/103901906/d6d74186-0d9e-41b1-9ee4-cc48146beb06)
+
 
 
 ## Project setup
